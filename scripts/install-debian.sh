@@ -11,16 +11,16 @@ KLIPPER_GROUP=$KLIPPER_USER
 install_packages()
 {
     # Packages for python cffi
-    PKGLIST="virtualenv python-dev libffi-dev build-essential"
+    PKGLIST="virtualenv python-dev libffi-dev"
     # kconfig requirements
     PKGLIST="${PKGLIST} libncurses-dev"
     # hub-ctrl
     PKGLIST="${PKGLIST} libusb-dev"
     # AVR chip installation and building
-    PKGLIST="${PKGLIST} avrdude gcc-avr binutils-avr avr-libc"
+    # PKGLIST="${PKGLIST} avrdude gcc-avr binutils-avr avr-libc"
     # ARM chip installation and building
-    PKGLIST="${PKGLIST} stm32flash libnewlib-arm-none-eabi"
-    PKGLIST="${PKGLIST} gcc-arm-none-eabi binutils-arm-none-eabi libusb-1.0 pkg-config"
+    # PKGLIST="${PKGLIST} stm32flash libnewlib-arm-none-eabi"
+    # PKGLIST="${PKGLIST} gcc-arm-none-eabi binutils-arm-none-eabi libusb-1.0 pkg-config"
 
     # Update system package info
     report_status "Running apt-get update..."
