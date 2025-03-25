@@ -303,6 +303,17 @@ The following information is available for each `[led led_name]`,
   chain could be accessed at
   `printer["neopixel <config_name>"].color_data[1][2]`.
 
+## load_cell
+
+The following information is available for each `[load_cell name]`:
+- 'is_calibrated': True/False is the load cell calibrated
+- 'counts_per_gram': The number of raw sensor counts that equals 1 gram of force
+- 'reference_tare_counts': The reference number of raw sensor counts for 0 force
+- 'tare_counts': The current number of raw sensor counts for 0 force
+- 'force_g': The force in grams, averaged over the last polling period.
+- 'min_force_g': The minimum force in grams, over the last polling period.
+- 'max_force_g': The maximum force in grams, over the last polling period.
+
 ## manual_probe
 
 The following information is available in the
@@ -446,6 +457,12 @@ The following information is available in
 [servo some_name](Config_Reference.md#servo) objects:
 - `printer["servo <config_name>"].value`: The last setting of the PWM
   pin (a value between 0.0 and 1.0) associated with the servo.
+
+## skew_correction.py
+
+The following information is available in the `skew_correction` object (this
+object is available if any skew_correction is defined):
+- `current_profile_name`: Returns the name of the currently loaded SKEW_PROFILE.
 
 ## stepper_enable
 
